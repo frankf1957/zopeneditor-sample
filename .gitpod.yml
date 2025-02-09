@@ -12,6 +12,7 @@ vscode:
     - zowe.vscode-extension-for-zowe
     - ibm.zopeneditor
     - redhat.ansible
+    - vscjava.vscode-java-pack
     - eamodio.gitlens
 
 ## Unsupported example image provided by the Z Open Editor team

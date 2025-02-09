@@ -14,3 +14,8 @@ RUN npm install -g @zowe/cli@latest --ignore-scripts && \
 
 RUN brew install ansible ansible-lint && \
     ansible-galaxy collection install ibm.ibm_zos_core
+
+USER gitpod
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
+    sdk install java 17.0.13-sem && \
+    sdk default java 17.0.13-sem"
