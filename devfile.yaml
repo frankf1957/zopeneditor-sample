@@ -1,0 +1,21 @@
+schemaVersion: 2.2.0
+metadata:
+  generateName: wazi-devspaces-sample
+ 
+projects:
+  - name: zopeneditor-sample
+    zip:
+      location: https://github.com/frankf1957/zopeneditor-sample
+ 
+components:
+  - name: zowe
+    volume:
+      size: 100Mi
+  - name: wazi-terminal
+    container:
+      image: icr.io/wazi-code/ibm-wazi-for-devspaces-sidecar@sha256:7779fc9f55865a5eb6eb0f877ca8aeff246d795070d14e4351094905ddf98cd7
+      memoryLimit: 3072Mi
+      mountSources: true
+      volumeMounts:
+        - name: zowe
+          path: /home/user/.zowe
